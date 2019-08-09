@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>软件定义汽车 · 软件定义汽车</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;随着汽车从硬件驱动的机器转为软件驱动的历程，汽车行业竞争的规则正不断被改写，本文档从多角度入手，试图展示当前软件定义汽车的发展概况与技术挑战。&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="软件定义汽车 · 软件定义汽车"/><meta property="og:type" content="website"/><meta property="og:url" content="https://SDV-Docs.github.io/"/><meta property="og:description" content="&lt;p&gt;随着汽车从硬件驱动的机器转为软件驱动的历程，汽车行业竞争的规则正不断被改写，本文档从多角度入手，试图展示当前软件定义汽车的发展概况与技术挑战。&lt;/p&gt;
+"/><meta property="og:image" content="https://SDV-Docs.github.io/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://SDV-Docs.github.io/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/favicon.ico" alt="软件定义汽车"/><h2 class="headerTitleWithLogo">软件定义汽车</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive siteNavItemActive"><a href="/docs/doc1" target="_self">Docs</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>软件定义汽车</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">软件定义汽车</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/docs/doc1">前言</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">车辆电动化</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/doc2">车辆电动化</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">自动驾驶</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/doc3">自动驾驶报告</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">车联网</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/doc6">车联网</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">电子电气架构</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/doc9">电子电气架构</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">软件定义汽车</h1></header><article><div><span><p>随着汽车从硬件驱动的机器转为软件驱动的历程，汽车行业竞争的规则正不断被改写，本文档从多角度入手，试图展示当前软件定义汽车的发展概况与技术挑战。</p>
+<h2><a class="anchor" aria-hidden="true" id="前言"></a><a href="#前言" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>前言</h2>
+<p>在传统汽车产业中，汽车的技术更新主要来源于引擎等方面。如今，在汽车电动化的大趋势下，对汽车的电动化，车联网，自动驾驶，电子电气架构上提出了新的技术挑战。汽车在逐步由硬件过渡到软件定义的形态。据麦肯锡数据，在制造的利润上，软件占比全车为10%，在2030年，有望达到30%。各大软硬厂商也在逐步攻占新的市场，寻找新的风口与商机。本文以软件定义汽车所面临的技术难题入手，分析当今实现软件定义汽车的机遇与挑战。
+本文档分为四个模块，分别为 汽车电动化，车联网，自动驾驶，整车电子电气架构 四个方面。</p>
+<h2><a class="anchor" aria-hidden="true" id="汽车的电动化之路"></a><a href="#汽车的电动化之路" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>汽车的电动化之路</h2>
+<p>汽车电动化如今已成为不可避免的趋势之一，但是否纯电动汽车就是环保，可靠的未来发展方向？如今仍寄于电池与新能源技术的革新上。</p>
+<p>根据SEG Automative 给出的报告（&quot;<a href="https://www.seg-automotive.com/zh/press-releases/-/asset_publisher/RkLRDVBVJOBg/content/whitepaper-spotlight-on-powertrain-technologies-from-an-environmental-and-customer-perspective">https://www.seg-automotive.com/zh/press-releases/-/asset_publisher/RkLRDVBVJOBg/content/whitepaper-spotlight-on-powertrain-technologies-from-an-environmental-and-customer-perspective</a>&quot;）</p>
+<p>作者指出了4大趋势如下：</p>
+<p>-全球电动汽车爆发式增长（2017年增长78%)，但市场份额仍然只有1%；即使到2025年，仍有85%的新车采用内燃机技术。</p>
+<p>-电动汽车并不一定能改善环境和气候，这取决于其所消耗的能源构成。有可能减少65%以上的二氧化碳排放，但也有可能增加30%以上。</p>
+<p>-目前对于消费者来说，电动汽车依旧价格昂贵，其分摊至每公里的成本比内燃机汽车甚至还贵5美分左右。</p>
+<p>-电池是电动汽车发展的最大瓶颈 （成本、续航里程、原材料、生产过程中二氧化碳的排放。</p>
+<p><img src="https://www.seg-automotive.com/documents/20143/0/Range+of+CO2+emissions+based+on+energy+mix.png/bde34c74-039f-9801-ce0b-22e95ed19ddf?t=1539852377480" alt="alt-text">
+图片为采用不同能源构成汽车的二氧化碳排放分析</p>
+<p>尽管如今Toyota宣传于2025年达到电动车占所有车型85%，还是BMW全力推动电动车研发，由本报告可见，在没有将能源高效率的转为电能的情况下，电动车只不过是把内燃机车排放在路上的污染转移到了发电厂，实质上来看区别不大。对于消费者而言，纯电动车更是价格高昂，难以负担。电动汽车的发展依托于可再生能源的发展与电池技术的革新。</p>
+<p>本文档就电动化的技术难点分为 电池、电池管理系统、热量管理系统、电机电控等方面。</p>
+<p><a href="/docs/doc2">点此进入详情</a></p>
+<h2><a class="anchor" aria-hidden="true" id="自动驾驶"></a><a href="#自动驾驶" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>自动驾驶</h2>
+<p>根据SAE International发布的驾驶自动化等级图表，自动驾驶的等级可归为如下几个等级
+<img src="http://www.sae.org.cn/uploads/article/5c19ffbf00828.jpg" alt="alt-text">
+目前，L2级别的自动驾驶汽车正在大规模落地、量产。同时，L4级别的自动驾驶汽车正在火热的研发，实验中。
+市场上已经有部分搭载了L2自动驾驶技术上市，如特斯拉的Autopilot、奔驰S级的ADAS、宝马7系的有增强型辅助驾驶功能。低价车方面，则有长安CS55、吉利缤瑞等车型。大部分主流车型已装配L1级别驾驶辅助系统。
+国内自主品牌如广汽乘用车、吉利、领克、长安、上汽、北汽都有2018年或2019年推出L2级自动驾驶汽车量产的计划；新造车企业如小鹏、拜腾、蔚来、威马等都具备L2级别的量产能力。与此同时，通用、福特、丰田等海外中级车型也开始在中国进入L2级别的“备战”。在L2级量产搭载方面，各大厂商已不约而同将2019年作为量产时间点。</p>
+<p>L2级自动驾驶已在眼前，那么L4以上甚至是L5级的完全自动驾驶，工程师们有信心更早实现吗？广汽乘用车的计划是2020年实现L3级，随后再实现L4级；长安汽车同样表示，L3级有限自动驾驶技术正在快速推进工程化开发，预计2020年实现量产，他们预计到2025年，能实现L4级量产。至于L5级，目前没有主机厂敢放话。</p>
+<p>长安、广汽等研发自动驾驶技术的工程师告诉记者，如果说硬件配置可以花钱解决，目前自动驾驶最大的障碍就是软件的成熟度。就连特斯拉的工程师也坦言，让ADAS完全主导车辆，目前来说“太难了”。在自动驾驶汽车领域，除了有足够多的硬件和机器学习以外，车辆还要能够实现V2X通信（车辆与基础设施的通信），有高精度地图支持。前两者可以花钱和时间实现，但后两者不是主机厂靠一己之力可以做到的。目前各大主机厂都在尽可能地实现L3的突破，但更高级的自动驾驶车型量产，则需要全社会资源、政策的共同配合
+（来源：新华网 <a href="http://www.xinhuanet.com/2018-10/22/c_1123592270.htm">http://www.xinhuanet.com/2018-10/22/c_1123592270.htm</a>）</p>
+<p><img src="https://pic.36krcnd.com/201906/11101338/odpictf8ctd8acnc.png!1200" alt="alt-text">
+由自动驾驶算法产业链可看出，自动驾驶技术所存在的难点主要有 感知、高精度地图、深度学习芯片 和控制安装器等方面。</p>
+<p>欲知详情，请点击</p>
+<p><a href="/docs/doc3">点此进入详情</a></p>
+<h2><a class="anchor" aria-hidden="true" id="车联网"></a><a href="#车联网" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>车联网</h2>
+<p>车联网概念引申于物联网（Internet of Things），根据行业背景不同，对车联网的定义也不尽相同。传统的车联网定义是指装载在车辆上的电子标签通过无线射频等识别技术，实现在信息网络平台上对所有车辆的属性信息和静、动态信息进行提取和有效利用，并根据不同的功能需求对所有车辆的运行状态进行有效的监管和提供综合服务的系统。</p>
+<p>随着车联网技术与产业的发展，上述定义已经不能涵盖车联网的全部内容。根据车联网产业技术创新战略联盟的定义，车联网是以车内网、车际网和车载移动互联网为基础，按照约定的通信协议和数据交互标准，在车-X（X：车、路、行人及互联网等）之间，进行无线通讯和信息交换的大系统网络，是能够实现智能化交通管理、智能动态信息服务和车辆智能化控制的一体化网络，是物联网技术在交通系统领域的典型应用。</p>
+<p><a href="/docs/doc3">点此进入详情</a></p>
+<h2><a class="anchor" aria-hidden="true" id="电子电气架构"></a><a href="#电子电气架构" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>电子电气架构</h2>
+<p>随着智能互联、自动驾驶、电动汽车及共享出行的发展，软件、计算能力和先进传感器正逐渐取代发动机的统治地位。与此同时，这些电子系统的复杂性也在提高。以当今汽车包含的软件代码行数（SLOC）为例，2010年，主流车型的SLOC约为1000万行；到2016年达到1.5亿行左右。复杂性正如滚雪球般越来越高，不可避免地导致了与软件相关的若干严重质量问题：这在近期若干起大规模车辆召回事件中屡有耳闻。</p>
+<p>当前，软件在D级车（或大型乘用车）的整车价值中占10%左右，预计将以每年11%的速度增长，到2030年将占整车内容的30%。数字化汽车价值链上的所有企业均在尝试从软件和电子技术带来的创新中获利（见图1）。软件公司和其他数字技术企业正从目前的二、三级供应商逐步成为整车企业的一级供应商。他们超越了功能和应用程序（APP）的范围，进一步涉足操作系统，加深在汽车“技术栈”中的参与度。同时，传统的汽车电子系统一级供应商正在大胆进入IT巨头所在的功能与应用程序领域。豪华品牌车企则正进入操作系统、硬件简化、信号处理等更底层的技术领域，以期从根本上确保其技术优势和独特性。</p>
+<p>这些战略举措的结果之一是车辆架构将变为以通用运算平台为基础的，面向服务的架构（SOA）。开发者将得以添加新的智能互联解决方案、APP、人工智能元素、高级分析工具和操作系统等。差异化（或独特性）将不再仅仅停留于传统的车辆硬件方面，而更多地通过由软件和先进电子技术赋能的用户交互界面和体验层面来体现。（来源：麦肯锡 <a href="https://www.mckinsey.com.cn/">https://www.mckinsey.com.cn/</a>软件和整车电子架构正重新定义汽车行业/）</p>
+<p><img src="http://n.sinaimg.cn/translate/153/w1080h673/20181217/kH38-hqhtqsp6273091.jpg" alt="alt-text">
+上图为博世发布的E/E Architecture发展路线，目前特斯拉等车厂已达到vehicle computer的阶段，大部分厂商仍在Fusion阶段徘徊，如何整合ECU等问题是电子电气架构方面的挑战难点</p>
+<p><a href="/docs/doc9">点此进入详情</a></p>
+<h2><a class="anchor" aria-hidden="true" id="引用与参考"></a><a href="#引用与参考" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>引用与参考</h2>
+<p>1、36氪研究 | 自动驾驶专题行研报告 <a href="https://36kr.com/p/5214334">https://36kr.com/p/5214334</a></p>
+<p>2、白皮书： 汽车的电动化发展，持续推进绿色出行 <a href="https://www.seg-automotive.com/zh/press-releases/-/asset_publisher/RkLRDVBVJOBg/content/whitepaper-spotlight-on-powertrain-technologies-from-an-environmental-and-customer-perspective">https://www.seg-automotive.com/zh/press-releases/-/asset_publisher/RkLRDVBVJOBg/content/whitepaper-spotlight-on-powertrain-technologies-from-an-environmental-and-customer-perspective</a></p>
+<p>3、SAE发布自动驾驶汽车 “驾驶自动化等级”可视化图表更新版  <a href="ttp://www.sae.org.cn/articles/18121901">ttp://www.sae.org.cn/articles/18121901</a></p>
+<p>4、罗兰贝格&amp;蔚来：场景致胜--汽车产业趋势洞察 <a href="http://www.sohu.com/a/301989401_99957909">http://www.sohu.com/a/301989401_99957909</a></p>
+<p>5、车联网产业发展报告（2019） <a href="http://www.xinhuanet.com/auto/2019-01/28/c_1124043861_2.htm">http://www.xinhuanet.com/auto/2019-01/28/c_1124043861_2.htm</a></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/docs/doc2"><span>车辆电动化</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#前言">前言</a></li><li><a href="#汽车的电动化之路">汽车的电动化之路</a></li><li><a href="#自动驾驶">自动驾驶</a></li><li><a href="#车联网">车联网</a></li><li><a href="#电子电气架构">电子电气架构</a></li><li><a href="#引用与参考">引用与参考</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.ico" alt="软件定义汽车" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a></div></section><section class="copyright">Copyright © 2019 Zixuan Chen</section></footer></div></body></html>
